@@ -62,23 +62,7 @@ public class ShippingListController {
             String trackingnumber=serviceShippingList.generateUniqueCode();
             shippingList.setTrackingNum(trackingnumber);
 
-           /* Users users = serviceUser.getUserById(UserID);
-            if (users == null) {
-                //throw new RecordNotFoundException("User not found");
-                model.addAttribute("msg", "user not exit");
-                return "DashBoard";
-            }
-            shippingList.setSender_ID(users.getUid());
-            shippingList.setSenderName(users.getUname());
-
-            Cargo cargo = serviceCargo.getCargoById(CargoID);
-            if (cargo == null) {
-                model.addAttribute("msg","cargo not exit");
-                return "DashBoard";
-            }
-            shippingList.setCargo_ID(cargo.getSbid());
-              double dd=cargo.getCost();
-              shippingList.setWeight(weight*dd);*/
+        
         try {
             Users users = serviceUser.getUserByIdd(UserID);
             if (users == null) {
